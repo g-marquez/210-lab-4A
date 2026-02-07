@@ -28,6 +28,10 @@ int main()
     cout << "Red Value: " << example.red_val << endl;
     cout << "Blue Value: " << example.blue_val << endl;
     cout << "Green Value: " << example.green_val << endl;
+
+    //create an empty <Color> vector
+    vector<Color> colorVec;
+    colorVec.push_back(example);
     
     return 0;
 }
