@@ -44,6 +44,20 @@ int main()
              << colorVec[i].green_val << endl;
     }
 
+    //RNG between 25 and 50 (following online example, pending any response on
+    // Module 2 discussion board)
+    random_device rd; //seed source for random number engine using <random>
+    mt19937 gen(rd()); //mersenne_twister_engine seeded with rd()
+    uniform_int_distribution<> distrib(25, 50);
+    int n = distrib(gen); //a random number n between 25 and 50
+    uniform_int_distribution<> rand_int();
+    int random_color_val = rand_int(gen); //random number for filling color member values
 
+    //push_back n colors into colorVec
+    for (int i = 0; i < n; ++i)
+    {
+        Color temp;
+
+    }
     return 0;
 }
