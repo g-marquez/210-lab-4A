@@ -33,5 +33,9 @@ int main()
     vector<Color> colorVec;
     colorVec.push_back(example);
     
+    for ( int i = 0; i < colorVec.size(); ++i)
+    {
+
+    }
     return 0;
 }
