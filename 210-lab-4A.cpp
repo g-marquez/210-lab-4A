@@ -32,10 +32,14 @@ int main()
     //create an empty <Color> vector
     vector<Color> colorVec;
     colorVec.push_back(example);
-    
+
+    //output colorVec to console
+    cout << "\nOutputting colorVec:\n";
     for ( int i = 0; i < colorVec.size(); ++i)
     {
-
+        cout << "Color #" << i+1 << endl;
+        cout << colorVec[i].red_val << " " << colorVec[i].blue_val << " "
+             << colorVec[i].green_val << endl;
     }
     return 0;
 }
