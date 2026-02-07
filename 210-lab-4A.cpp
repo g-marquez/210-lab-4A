@@ -1,10 +1,12 @@
 //*****************************************************************************
 // COMSC-210 | Lab 4A | Gabriel Marquez
-// Description: this program create and store a vector of structs.
+// Description: this program creates and stores a vector of structs.
 //*****************************************************************************
 
 #include <iostream>
 #include <vector>
+#include <random>
+#include <iomanip>
 using namespace std;
 
 struct Color
@@ -41,5 +43,7 @@ int main()
         cout << colorVec[i].red_val << " " << colorVec[i].blue_val << " "
              << colorVec[i].green_val << endl;
     }
+
+
     return 0;
 }
