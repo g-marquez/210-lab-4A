@@ -41,7 +41,7 @@ int main()
     {
         cout << "Color #" << i+1 << endl;
         cout << colorVec[i].red_val << " " << colorVec[i].blue_val << " "
-             << colorVec[i].green_val << endl;
+             << colorVec[i].green_val << endl << endl;
     }
 
     //clearing colorVec for next Milestone
@@ -67,12 +67,15 @@ int main()
     }
 
     //output colorVec with n elements
+    cout << "Outputting colorVec with " << n << " elements:" << endl;
     for ( int i = 0; i < colorVec.size(); ++i)
     {
         cout << "Color #" << i+1 << endl;
         cout << colorVec[i].red_val << " " << colorVec[i].blue_val << " "
              << colorVec[i].green_val << endl << endl;
     }
+
+    //pausing work for now
 
     return 0;
 }
