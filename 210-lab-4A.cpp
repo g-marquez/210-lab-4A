@@ -9,6 +9,9 @@
 #include <iomanip>
 using namespace std;
 
+int RAND_MAXIMUM = 50;
+int RAND_MINIMUM = 25;
+
 struct Color
 {
     int red_val;
@@ -18,7 +21,10 @@ struct Color
 
 int main()
 {
-    //declare and initialize example Color object with values
+    //setting seed value for rand()
+    srand(time(0));
+    
+    //declare and initialize example Color object with arbitrary values
     Color example;
     example.red_val = 12;
     example.blue_val = 23;
@@ -47,22 +53,17 @@ int main()
     //clearing colorVec for next Milestone
     colorVec.clear();
 
-    //RNG between 25 and 50 (following online example, pending any response on
-    // Module 2 discussion board)
-    random_device rd; //seed source for random number engine using <random>
-    mt19937 gen(rd()); //mersenne_twister_engine seeded with rd()
-    uniform_int_distribution<> distrib(25, 50);
-    int n = distrib(gen); //a random number n between 25 and 50
-    uniform_int_distribution<> rand_int(1, 1000); //arbitrary range selected
-    int random_color_val = rand_int(gen); //random number for filling color member values
+    //RNG between 25 and 50 for number n of elements in colorVec
+    //figuring out how to do without uniform_int_distribution
+    int n = rand(); //a random number n between 25 and 50
 
     //push_back n colors into colorVec
     for (int i = 0; i < n; ++i)
     {
         Color temp;
-        temp.red_val = random_color_val;
-        temp.blue_val = random_color_val;
-        temp.green_val = random_color_val;
+        temp.red_val = rand();
+        temp.blue_val = rand();
+        temp.green_val = rand();
         colorVec.push_back(temp);
     }
 
