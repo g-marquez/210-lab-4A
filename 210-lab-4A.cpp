@@ -9,9 +9,9 @@
 #include <iomanip>
 using namespace std;
 
-int RAND_MAXIMUM = 51; //because we want 50 to be included
-int RAND_MINIMUM = 25;
-int ARBITRARY_MOD = 250; //limit for rand values
+const int RAND_MAXIMUM = 51; //because we want 50 to be included
+const int RAND_MINIMUM = 25;
+const int ARBITRARY_MOD = 250; //limit for rand values
 
 struct Color
 {
@@ -55,8 +55,8 @@ int main()
     colorVec.clear();
 
     //RNG between 25 and 50 for number n of elements in colorVec
-    //figuring out how to do without uniform_int_distribution
-    int n = rand() % RAND_MAXIMUM + RAND_MINIMUM; //a random number n between 25 and 50
+    //thank you, review video!
+    int n = rand() % (RAND_MAXIMUM - RAND_MINIMUM + 1) + RAND_MINIMUM; //a random number n between 25 and 50
 
     //push_back n colors into colorVec
     for (int i = 0; i < n; ++i)
