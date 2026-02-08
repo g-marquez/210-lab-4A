@@ -75,7 +75,5 @@ int main()
              << colorVec[i].green_val << endl << endl;
     }
 
-    //stopping work for now
-
     return 0;
 }
