@@ -12,7 +12,7 @@ using namespace std;
 const int RAND_MAXIMUM = 50;
 const int RAND_MINIMUM = 25;
 const int ARBITRARY_MOD = 250; //limit for rand color values
-const int SET_WIDTH = 10;
+const int SET_WIDTH = 5;
 
 struct Color
 {
@@ -73,12 +73,13 @@ int main()
     cout << "Outputting colorVec with " << n << " elements:" << endl;
     for ( int i = 0; i < colorVec.size(); ++i)
     {
+        cout << setw(SET_WIDTH) << "Color#" << setw(SET_WIDTH) << "\tR value" 
+             << setw(SET_WIDTH) << "\tB value" << setw(SET_WIDTH) << "\tG value"
+             << endl;
         cout << setw(SET_WIDTH);
-        cout << "\tColor #" << "R value" << "B value" << "G value" << endl;
+        cout << "------" << "\t" << "-------" << "\t" << "-------" << "\t" << "-------" << endl;
         cout << setw(SET_WIDTH);
-        cout << "\t------" << " " << "------" << "\t" << "------" << "\t" << "------" << endl;
-        cout << setw(SET_WIDTH);
-        cout << "\t" <<  i + 1 << " " << colorVec[i].red_val << " " << colorVec[i].blue_val 
+        cout <<  i + 1 << " " << colorVec[i].red_val << " " << colorVec[i].blue_val 
              << " " << colorVec[i].green_val << endl << endl;
     }
 
