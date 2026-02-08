@@ -11,9 +11,9 @@ using namespace std;
 
 const int RAND_MAXIMUM = 50;
 const int RAND_MINIMUM = 25;
-const int ARBITRARY_MOD = 250; //limit for rand color values
-const int SET_START = 4;
-const int SET_WIDTH = 10;
+const int ARBITRARY_MOD = 250; //arbitrary limit for rand color values
+const int SET_START = 4; //startig width for number vals in colorVec
+const int SET_WIDTH = 10; //general width for final output table
 
 struct Color
 {
@@ -24,8 +24,7 @@ struct Color
 
 int main()
 {
-    //setting seed value for rand()
-    srand(time(0));
+    srand(time(0)); //setting seed value for rand()
     
     //declare and initialize example Color object with arbitrary values
     Color example;
@@ -40,7 +39,7 @@ int main()
     cout << "Blue Value: " << example.blue_val << endl;
     cout << "Green Value: " << example.green_val << endl;
 
-    //create an empty <Color> vector
+    //create an empty <Color> vector and push example into it
     vector<Color> colorVec;
     colorVec.push_back(example);
 
@@ -81,8 +80,9 @@ int main()
     for ( int i = 0; i < colorVec.size(); ++i)
     {
         
-        cout << setw(SET_START) <<  i + 1 << setw(SET_WIDTH) << colorVec[i].red_val << setw(SET_WIDTH) << colorVec[i].blue_val 
-             << setw(SET_WIDTH) << colorVec[i].green_val << endl;
+        cout << setw(SET_START) <<  i + 1 << setw(SET_WIDTH) << colorVec[i].red_val
+             << setw(SET_WIDTH) << colorVec[i].blue_val << setw(SET_WIDTH)
+             << colorVec[i].green_val << endl;
     }
 
     return 0;
