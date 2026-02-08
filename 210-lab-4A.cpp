@@ -12,7 +12,8 @@ using namespace std;
 const int RAND_MAXIMUM = 50;
 const int RAND_MINIMUM = 25;
 const int ARBITRARY_MOD = 250; //limit for rand color values
-const int SET_WIDTH = 8;
+const int SET_START = 4;
+const int SET_WIDTH = 10;
 
 struct Color
 {
@@ -71,16 +72,16 @@ int main()
 
     //output colorVec with n elements
     cout << "Outputting colorVec with " << n << " elements:" << endl;
-    cout << setw(SET_WIDTH) << "Color#" << setw(SET_WIDTH) << "R value" 
+    cout << "Color#" << setw(SET_WIDTH) << "R value" 
              << setw(SET_WIDTH) << "B value" << setw(SET_WIDTH) << "G value"
              << endl;
-        cout << setw(SET_WIDTH) << "------" << setw(SET_WIDTH) << "-------" 
-             << setw(SET_WIDTH) << "-------" << setw(SET_WIDTH) << "-------" 
-             << endl;
+    cout << "------" << setw(SET_WIDTH) << "-------" 
+         << setw(SET_WIDTH) << "-------" << setw(SET_WIDTH) << "-------" 
+         << endl;
     for ( int i = 0; i < colorVec.size(); ++i)
     {
         
-        cout << setw(SET_WIDTH) <<  i + 1 << setw(SET_WIDTH) << colorVec[i].red_val << setw(SET_WIDTH) << colorVec[i].blue_val 
+        cout << setw(SET_START) <<  i + 1 << setw(SET_WIDTH) << colorVec[i].red_val << setw(SET_WIDTH) << colorVec[i].blue_val 
              << setw(SET_WIDTH) << colorVec[i].green_val << endl;
     }
 
