@@ -73,7 +73,7 @@ int main()
     for ( int i = 0; i < colorVec.size(); ++i)
     {
         cout << setw(6);
-        cout << "Color #" << "\tR value" << "\tB value" << "\tG value" << endl;
+        cout << "Color #" << "R value" << "B value" << "G value" << endl;
         cout << i + 1 << colorVec[i].red_val << " " << colorVec[i].blue_val << " "
              << colorVec[i].green_val << endl << endl;
     }
